@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script type='module' src='src/comets.js'></script>
+  <script type='module' src='src/index.js'></script>
+  <script type='module' src='src/stars.js'></script>
+  <script type='module' src='src/scroll.js'></script>
+
+</head>
+<body>
+
+  <svg id='canvas'
+       xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+    <filter id="blur"
+            x="-100%"
+            y="-100%"
+            width="400%"
+            height="400%">
+      <feGaussianBlur stdDeviation="1.0" />
+    </filter>
+
+    <g id='bg-layer'
+       width='100%'
+       height='100%'>
+    </g>
+
+    <g id='sun-and-moon-layer'>
+      <image id='sun' x="60%" y="60%" width="200" height="200" xlink:href="svg/sun.svg" display='none' />
+      <image id='moon' x="10%" y="70%" width="200" height="200" xlink:href="svg/moon.svg" display='none' />
+    </g>
+
+    <g id='comets-layer'>
+    </g>
+
+    <g id='clouds-layer'>
+      <image class='cloud' opacity=0.8 x="52%" y="70%" width="300" height="300" xlink:href="svg/cloud1.svg" />
+      <image class='cloud' opacity=0.8 x="63%" y="47%" width="300" height="300" xlink:href="svg/cloud2.svg" />
+      <image class='cloud' opacity=0.8 x="58%" y="53%" width="300" height="300" xlink:href="svg/cloud3.svg" />
+      <image class='cloud' opacity=0.8 x="80%" y="35%" width="300" height="300" xlink:href="svg/cloud5.svg" />
+    </g>
+  </svg>
+  
+  <main>
+    <nav>
+      <ul class='topmenu'>
+        <li id='topmenu-img'><a href='#'><img src="svg/JA_white_outline.svg"></a></li>
+        <li><a href='#'>Home</a></li>
+        <li><a href='#'>Experience</a></li>
+        <li><a href='#'>Skills</a></li>
+        <li><a href='#'>Education</a></li>
+        <li><a href='#'>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class='sections'>
+      <div class='section-wrapper'>
+        <section>
+          <h1>Hi!</h1>
+          <p>I'm Jack, a developer currently based in Boone, NC.</p>
+        </section>
+      </div>
+
+      <div class='section-wrapper'>
+        <section>
+          <h1>Hi!</h1>
+          <p>I'm Jack, a developer currently based in Boone, NC.</p>
+        </section>
+      </div>
+
+      <div class='section-wrapper'>
+        <section>
+          <h1>Hi!</h1>
+          <p>I'm Jack, a developer currently based in Boone, NC.</p>
+        </section>
+      </div>
+
+      <div class='section-wrapper'>
+        <section>
+          <h1>Hi!</h1>
+          <p>I'm Jack, a developer currently based in Boone, NC.</p>
+        </section>
+      </div>
+
+      <div class='section-wrapper'>
+        <section>
+          <h1>Hi!</h1>
+          <p>I'm Jack, a developer currently based in Boone, NC.</p>
+        </section>
+      </div>
+
+    <div class='sections'>
+  </main>
+
+</body>
+</html>
