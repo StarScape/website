@@ -7,14 +7,14 @@ export default class Cloud {
     const x = this.elem.getAttribute('x')
     const y = this.elem.getAttribute('y')
 
-    this.initialX = -parseInt(x.slice(0, x.length-1), 10) + 20
-    this.deltaX = 250
+    this.initialX = parseInt(x.slice(0, x.length-1), 10)
+    this.deltaX = 15
 
-    this.initialY = parseInt(y.slice(0, y.length-1), 10) - 40
-    this.deltaY = 25
+    this.initialY = parseInt(y.slice(0, y.length-1), 10)
+    this.deltaY = 10
 
-    this.initialOpacity = 0.75
-    this.deltaOpacity = -0.075
+    this.initialOpacity = 0.75 - Math.random()*0.2
+    this.deltaOpacity = -0.025
   }
 
   // Get current (x, y) of cloud based on percent scrolled

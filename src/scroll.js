@@ -81,7 +81,7 @@ const updateMoon = (p, elem) => {
 
 const initClouds = (clouds) => {
   const width = window.innerWidth
-  const cloudSize = width / 6
+  const cloudSize = width / 10
   clouds.forEach(cloud => {
     cloud.elem.setAttributeNS(null, 'width', `${cloudSize}`)
     cloud.elem.setAttributeNS(null, 'height', `${cloudSize}`)

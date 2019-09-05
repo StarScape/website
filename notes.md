@@ -15,7 +15,8 @@ Another one, lighter:
 * Shooting stars ✔️
 * Make shooting stars move as you scroll
 * Vary color of stars a bit?
-* Get rid of requestAnimationFrame
+* Get rid of requestAnimationFrame ✔️
+* Shift sun/moon/clouds relative to mouse
 * Regen stars on window resize
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
 
