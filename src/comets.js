@@ -47,7 +47,7 @@ const spawnComet = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  if (scrollPercent() >= .2 && prob(0.35)) {
+  if (/*scrollPercent() >= .2 && */prob(0.35)) {
     new Comet({
       startx: -100,
       starty: randrange(-100, height*0.25),

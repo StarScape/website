@@ -17,6 +17,7 @@ Another one, lighter:
 * Vary color of stars a bit?
 * Get rid of requestAnimationFrame ✔️
 * Shift sun/moon/clouds relative to mouse
+* Slide in elems as people scroll
 * Regen stars on window resize
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
 
