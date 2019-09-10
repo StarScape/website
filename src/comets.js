@@ -8,9 +8,9 @@ import {
 
 
 class Comet {
-  speed = 45
 
   constructor({ startx, starty, size=100, theta, container }) {
+    this.speed = 45
     this.thetaRads = radians(theta)
     this.container = container
     this.opacity = 1
@@ -47,7 +47,7 @@ const spawnComet = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  if (/*scrollPercent() >= .2 && */prob(0.35)) {
+  if (/*scrollPercent() >= .2 && */ document.hasFocus() && prob(0.35)) {
     new Comet({
       startx: -100,
       starty: randrange(-100, height*0.25),
@@ -61,3 +61,4 @@ const spawnComet = () => {
 }
 
 setTimeout(spawnComet, 2000)
+

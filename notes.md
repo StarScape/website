@@ -19,6 +19,7 @@ Another one, lighter:
 * Shift sun/moon/clouds relative to mouse
 * Slide in elems as people scroll
 * Regen stars on window resize
+* Try using rasters of Sun/Moon/comets instead
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
 
 # Sections:
