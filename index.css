@@ -157,15 +157,31 @@ section {
 }
 
 .img-container img {
-  background-color: #111111;
+  /*background-color: #111111;*/
   border-radius: 50%;
   width: 3rem;
   margin-left:  0.5em;
   margin-right: 0.5em;
+
+  filter: grayscale(90%);
+  transition-property: filter;
+  transition-duration: 0.5s;
+}
+
+.img-container img:hover {
+  filter: grayscale(0%);
 }
 
 .img-container h6 {
   margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.img-container:hover h6 {
+  opacity: 1;
 }
 
 .job {
@@ -200,4 +216,16 @@ section {
 
 .job p {
   font-size: 0.75em;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  border: 1px solid black;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  background-color: blue;
 }
