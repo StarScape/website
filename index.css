@@ -81,20 +81,22 @@ nav {
 }
 
 .sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 70%;
 }
 
 .section-wrapper {
-  position: relative;
-  /*text-align: center;*/
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .content-box {
@@ -116,10 +118,16 @@ section {
   padding: 10px;
   margin-top:    0rem;
   margin-bottom: 0rem;
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 .header-box h1 {
   margin: 0;
+}
+
+#section1 .content-box {
+  max-width: 30rem;
 }
 
 #section1-header {
@@ -162,15 +170,16 @@ section {
 
 .job {
   display: flex;
-  /*grid-template-columns: repeat(2, auto);*/
+  margin-bottom: 10vh;
 }
 
 .job img {
-  width: 23rem;
+  width: 25rem;
 }
 
-.job-right {
+.job-info {
   flex: 1;
+  width: 25rem;
   margin-right: 1rem;
 }
 
