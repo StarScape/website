@@ -26,7 +26,7 @@ body {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 #canvas {
@@ -95,12 +95,31 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.content-box {
+  border-radius: 3px;
+  padding: 20px;
+  /*background: linear-gradient(to bottom right, #222222, #111111ee);*/
+  background: linear-gradient(to bottom right, #222222aa, #11111188);
+  /*background: linear-gradient(to bottom, #99999933, #99999911);*/
+  color: #EEEEEE;
 
   display: inline-block;
-  padding: 20px;
-  /*background-color: #222222;*/
-  background: linear-gradient(to bottom right, #222222, #111111ee);
-  color: white;
+  margin-top:    2rem;
+  margin-bottom: 2rem;
+
+  backdrop-filter: blur(4px);
+}
+
+.header-box {
+  padding: 10px;
+  margin-top:    0rem;
+  margin-bottom: 0rem;
+}
+
+.header-box h1 {
+  margin: 0;
 }
 
 #section1-header {
@@ -115,7 +134,7 @@ section {
 }
 
 #section1-header h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0.25em;
   margin-left: 0.75rem;
 }
@@ -139,4 +158,37 @@ section {
 
 .img-container h6 {
   margin-top: 0;
+}
+
+.job {
+  display: flex;
+  /*grid-template-columns: repeat(2, auto);*/
+}
+
+.job img {
+  width: 23rem;
+}
+
+.job-right {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.job-company {
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.job-body {
+  margin-left: 0.25rem;
+}
+
+.job-body h6 {
+  font-style: italic;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.job p {
+  font-size: 0.75em;
 }

@@ -14,10 +14,14 @@ Another one, lighter:
 * Clouds
 * Shooting stars ✔️
 * Make shooting stars move as you scroll
-* Vary color of stars a bit?
 * Get rid of requestAnimationFrame ✔️
 * Shift sun/moon/clouds relative to mouse
-* Slide in elems as people scroll
+* Finish Experience Section
+* Finish Skills section
+* Finish Contact section
+* Videos for Experience section
+* Slide in elems as you scroll
+* Typgraphy
 * Regen stars on window resize
 * Try using rasters of Sun/Moon/comets instead
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
