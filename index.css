@@ -178,6 +178,7 @@ section {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 0.5s;
+  text-align: center;
 }
 
 .img-container:hover h6 {
@@ -186,31 +187,45 @@ section {
 
 .job {
   display: flex;
+  flex-direction: column;
+  padding: 0;
   margin-bottom: 10vh;
 }
 
-.job img {
+.job .job-img {
   width: 25rem;
 }
 
 .job-info {
-  flex: 1;
+  /*flex: 1;*/
+  flex-direction: column;
+  padding: 1rem;
+  padding-left:  2rem;
+  padding-right: 2rem;
   width: 25rem;
-  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
+
 
 .job-company {
   white-space: nowrap;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .job-body {
   margin-left: 0.25rem;
 }
 
-.job-body h6 {
+.job-body .top-header {
   font-style: italic;
   margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.job-body .header {
+  margin-top: 1.5em;
   margin-bottom: 0.25em;
 }
 
@@ -218,14 +233,36 @@ section {
   font-size: 0.75em;
 }
 
+.accomplishments-ul {
+  margin: 0;
+  font-size: 0.75em;
+  padding-left: 1em;
+}
+
+.accomplishments-ul li {
+  line-height: 1.0rem;
+}
+
+.job .img-container img {
+  width: 2.5rem;
+}
+
+.tech-container {
+  text-align: center;
+}
+
 .progress-bar {
   width: 200px;
-  height: 10px;
-  border: 1px solid black;
+  height: 12px;
+  border-radius: 100px;
+  background-color: #333333;
+  overflow: hidden;
+
 }
 
 .progress-bar > span {
   display: block;
-  height: 100%;
-  background-color: blue;
+  height: 200%;
+  background: linear-gradient(to right, #1e00ab, #0077f3),
+              linear-gradient(to bottom, #004eff, #3b008b);
 }
