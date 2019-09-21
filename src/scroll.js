@@ -105,13 +105,27 @@ const updateBgGradient = (p) => {
   document.body.style.backgroundAttachment = 'fixed'
 }
 
-const updateElems = ({ sun, moon, clouds }) => {
+let timeout = null
+
+const updateArrow = (arrow) => {
+  if (window.scrollY > 10) {
+    arrow.style.opacity = 0
+    arrow.style.visibility = 'hidden'
+  }
+  else {
+    arrow.style.visibility = 'visible'
+    arrow.style.opacity = 0.5
+  }
+}
+
+const updateElems = ({ sun, moon, clouds, arrow }) => {
   const percentToBottom = scrollPercent()
 
   updateSun(percentToBottom, sun)
   updateMoon(percentToBottom, moon)
   updateClouds(percentToBottom, clouds)
   updateBgGradient(percentToBottom)
+  updateArrow(arrow)
 }
 
 const main = () => {
@@ -121,16 +135,17 @@ const main = () => {
 
   const sun = document.querySelector('#sun')
   const moon = document.querySelector('#moon')
+  const arrow = document.querySelector('#down-arrow')
 
   initClouds(clouds)
-  updateElems({ sun, moon, clouds })
+  updateElems({ sun, moon, clouds, arrow })
 
   // Show hidden elements
   sun.setAttribute('display', null)
   moon.setAttribute('display', null)
 
   window.addEventListener('scroll', () => {
-    updateElems({ sun, moon, clouds })
+    updateElems({ sun, moon, clouds, arrow })
   })
 }
 

@@ -185,6 +185,12 @@ section {
   opacity: 1;
 }
 
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 3rem;
+}
+
 .job {
   display: flex;
   flex-direction: column;
@@ -208,7 +214,6 @@ section {
   box-sizing: border-box;
 }
 
-
 .job-company {
   white-space: nowrap;
   margin: 0;
@@ -216,6 +221,8 @@ section {
 
 .job-body {
   margin-left: 0.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .job-body .top-header {
@@ -265,4 +272,22 @@ section {
   height: 200%;
   background: linear-gradient(to right, #1e00ab, #0077f3),
               linear-gradient(to bottom, #004eff, #3b008b);
+}
+
+#down-arrow {
+  position: fixed;
+  left: calc(50% - 30px);
+  top:  calc(100vh - 70px);
+  width:  30px;
+  height: 30px;
+  border-right:  5px solid white;
+  border-bottom: 5px solid white;
+  opacity: 0.5;
+  transform: rotate(45deg);
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+#down-arrow:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
