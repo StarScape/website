@@ -114,7 +114,7 @@ const updateArrow = (arrow) => {
   }
   else {
     arrow.style.visibility = 'visible'
-    arrow.style.opacity = 0.5
+    arrow.style.opacity = 0.6
   }
 }
 
