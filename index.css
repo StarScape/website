@@ -113,6 +113,11 @@ nav {
   cursor: pointer;
 }
 
+.topmenu li a:before {
+  height: 1px;
+  background-color: white;
+}
+
 .sections {
   display: flex;
   flex-direction: column;
@@ -202,7 +207,7 @@ section {
 }
 
 .img-container img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(0%) !important;
 }
 
 .img-container h6 {
@@ -292,28 +297,40 @@ section {
   text-align: center;
 }
 
+#skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 2rem;
+}
+
 .skill {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Change some props specifically in skills */
 .skill .img-container {
+  position: relative;
+  margin-right: 0.25rem;
 }
 
 .skill .img-container img {
-  filter: grayscale(25%);
+  width: 2.75rem;
+  filter: grayscale(40%);
   margin-bottom: 0em;
 }
 
 .skill .img-container h6 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 1;
 }
 
 .progress-bar {
-  width: 300px;
+  width: 250px;
   height: 12px;
   border-radius: 100px;
   background-color: #333333;
@@ -328,6 +345,30 @@ section {
   filter: brightness(75%) saturate(150%);
   background: linear-gradient(to right, rgb(19, 214, 235), rgb(39, 234, 255));
               /*linear-gradient(to right, rgba(19, 214, 235, 0.1), rgba(39, 234, 255, 0.1));*/
+}
+
+.degree h3, h6 {
+  margin-top:    0;
+  margin-bottom: 0.5em;
+}
+
+.degree-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.degree-header img {
+  width: 2rem;
+  margin-right: 10px;
+}
+
+.degree-header h3 {
+  margin: 0;
+}
+
+.degree-body {
+  margin-left: calc(2rem + 12px);
 }
 
 #down-arrow {

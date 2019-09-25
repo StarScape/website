@@ -17,7 +17,8 @@ Another one, lighter:
 * Get rid of requestAnimationFrame ✔️
 * Shift sun/moon/clouds relative to mouse
 * Finish Experience Section ✔️
-* Finish Skills section (make into two columns) <--------------- !!!! pick up here
+* Finish Skills section
+* Replace language icons
 * Finish Contact section
 * Videos for Experience section
 * Slide in elems as you scroll
