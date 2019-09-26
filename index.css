@@ -134,9 +134,6 @@ nav {
   align-items: flex-start;
 }
 
-section {
-}
-
 .content-box {
   border-radius: 3px;
   padding: 20px;
@@ -369,6 +366,25 @@ section {
 
 .degree-body {
   margin-left: calc(2rem + 12px);
+}
+
+#contact ul {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  padding: 0;
+  font-size: 0.9rem;
+  list-style-type: none;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+#contact ul li img {
+  filter: brightness(90%);
+  width: 2rem;
 }
 
 #down-arrow {

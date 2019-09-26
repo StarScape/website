@@ -17,10 +17,11 @@ Another one, lighter:
 * Get rid of requestAnimationFrame ✔️
 * Shift sun/moon/clouds relative to mouse
 * Finish Experience Section ✔️
-* Finish Skills section
+* Finish Skills section ✔️
 * Replace language icons
-* Finish Contact section
-* Videos for Experience section
+* Finish Contact section ✔️
+* Add very short about
+* Add resume to site
 * Slide in elems as you scroll
 * Typgraphy
 * Regen stars on window resize
