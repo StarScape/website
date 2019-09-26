@@ -20,8 +20,9 @@ Another one, lighter:
 * Finish Skills section ✔️
 * Replace language icons
 * Finish Contact section ✔️
+* Make top links work ✔️
 * Add very short about
-* Add resume to site
+* Add resume to site ✔️
 * Slide in elems as you scroll
 * Typgraphy
 * Regen stars on window resize

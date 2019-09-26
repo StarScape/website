@@ -10,6 +10,7 @@
   <script type='module' src='src/index.js'></script>
   <script type='module' src='src/stars.js'></script>
   <script type='module' src='src/scroll.js'></script>
+  <script type='module' src='src/scroll_anchors.js'></script>
 
 </head>
 <body>
@@ -50,16 +51,16 @@
     <nav>
       <ul class='topmenu'>
         <li id='topmenu-img'><a href='#'><img src="svg/JA_white_outline.svg"></a></li>
-        <li><a href='#'>Home</a></li>
-        <li><a href='#'>Experience</a></li>
-        <li><a href='#'>Skills</a></li>
-        <li><a href='#'>Education</a></li>
-        <li><a href='#'>Contact</a></li>
+        <li><a href='#landing-section'>Home</a></li>
+        <li><a href='#experience-section'>Experience</a></li>
+        <li><a href='#skills-section'>Skills</a></li>
+        <li><a href='#education-section'>Education</a></li>
+        <li><a href='#contact-section'>Contact</a></li>
       </ul>
     </nav>
 
     <div class='sections'>
-      <div class='section-wrapper'>
+      <div id='landing-section' class='section-wrapper'>
         <section id='section1'>
           <div class='content-box'>
             <div id='section1-header'>
@@ -91,7 +92,7 @@
         </section>
       </div>
 
-      <div class='section-wrapper'>
+      <div id='experience-section' class='section-wrapper'>
           <div class='content-box header-box'>
             <h1>Experience</h1>
           </div>
@@ -283,7 +284,7 @@
           </div>
       </div>
 
-      <div class='section-wrapper'>
+      <div id='skills-section' class='section-wrapper'>
         <div class='content-box header-box'>
           <h1>Skills</h1>
         </div>
@@ -451,7 +452,7 @@
         </section>
       </div>
 
-      <div class='section-wrapper'>
+      <div id='education-section' class='section-wrapper'>
         <div class='content-box header-box'>
           <h1>Education</h1>
         </div>
@@ -483,7 +484,7 @@
         </section>
       </div>
 
-      <div class='section-wrapper'>
+      <div id='contact-section' class='section-wrapper'>
         <div class='content-box header-box'>
           <h1>Contact / About</h1>
         </div>
