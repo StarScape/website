@@ -41,3 +41,26 @@ Another one, lighter:
 
 const getSunY = (p) => sunInitialY + sunDeltaY*Math.sin(p*(Math.PI/2))
 const getSunX = (p) => sunInitialX + sunDeltaX*Math.cos(p*(-Math.PI/2))
+
+# Slide in css
+
+```
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  
+  animation: slidein 0.5s linear;
+}
+```

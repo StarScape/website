@@ -93,6 +93,11 @@ nav {
   transition: opacity 1s;
 }
 
+/* Hide underline for topmenu img */
+#topmenu-img a:before {
+  visibility: hidden;
+}
+
 .topmenu img {
   vertical-align: middle;
   width: 2.0rem;
@@ -114,6 +119,7 @@ nav {
 }
 
 .topmenu li a:before {
+  bottom: 0;
   height: 1px;
   background-color: white;
 }
