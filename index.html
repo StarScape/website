@@ -51,7 +51,7 @@
   
   <main>
     <nav>
-      <ul class='topmenu'>
+      <ul class='topmenu slide' slide-anim='fadetop'>
         <li id='topmenu-img'><a href='#'><img src="svg/JA_white_outline.svg"></a></li>
         <li><a href='#landing-section'>Home</a></li>
         <li><a href='#experience-section'>Experience</a></li>
@@ -66,26 +66,26 @@
         <section id='section1'>
           <div class='content-box'>
             <div id='section1-header'>
-              <img src='img/jack.png' class='slide' slide-delay=2><h1>Hi!</h1>
+              <img src='img/jack.png' class='slide'><h1 class='slide' slide-anim='fadetop'>Hi!</h1>
             </div>
-            <p>I'm Jack, a full-stack developer currently based in Boone, NC. Scroll down into the sunset to view my work.</p>
+            <p class='slide' slide-anim='fadetop'>I'm Jack, a full-stack developer currently based in Boone, NC. Scroll down into the sunset to view my work.</p>
             
             <div id='section1-bottom-header'>
-              <h3>Here's some things I like:</h3>
+              <h3 class='slide' slide-anim='fadetop'>Here's some things I like:</h3>
 
-              <div class='img-container'>
+              <div class='slide img-container' slide-anim='fadetop' slide-delay=0.1>
                 <img src='img/js.png'>
                 <h6>JS</h6>
               </div>
-              <div class='img-container'>
+              <div class='slide img-container' slide-anim='fadetop' slide-delay=0.2>
                 <img src='img/ruby.png'>
                 <h6>Ruby</h6>
               </div>
-              <div class='img-container'>
+              <div class='slide img-container' slide-anim='fadetop' slide-delay=0.3>
                 <img src='img/python.png'>
                 <h6>Python</h6>
               </div>
-              <div class='img-container'>
+              <div class='slide img-container' slide-anim='fadetop' slide-delay=0.4>
                 <img src='img/react.png'>
                 <h6>React.js</h6>
               </div>
@@ -265,17 +265,21 @@
                     document.write(new Date().getUTCFullYear() - 2013 + 1);
                   </script> years now, and along the way have coded a number of personal projects, including:</p>
 
-                  <p>
-                    <a target='_blank' href='https://github.com/StarScape/talkr'>A realtime chatroom</a>
-                    <br><br>
-                    <a target='_blank' href='https://github.com/StarScape/interpreter'>A Turing-complete interpreter in Haskell</a>
-                    <br><br>
-                    <a target='_blank' href='https://starscape.github.io/fractaltree/'>Some code art made with JS + canvas</a>
-                    <br><br>
-                    <a target='_blank' href='https://github.com/StarScape/DB-Project/'>A package-management app for university housing (PoC)</a>
-                    <br><br>
-                    <a target='_blank' href='https://starscape.github.io/hangul-helper/'>A Hangul reference website</a>
-                  </p>
+                  <ul class='other-projects-links'>
+                    <li>
+                      <a target='_blank' href='https://github.com/StarScape/talkr'>A realtime chatroom</a>
+                    </li>
+                    <li>
+                      <a target='_blank' href='https://github.com/StarScape/interpreter'>
+                        A Turing-complete interpreter in Haskell
+                      </a>
+                    </li>
+                    <li>
+                      <a target='_blank' href='https://starscape.github.io/fractaltree/'>Some code art made with JS + canvas</a>
+                    </li>
+                    <li><a target='_blank' href='https://github.com/StarScape/DB-Project/'>A package-management app for </university housing (PoC)</a>
+                    <li><a target='_blank' href='https://starscape.github.io/hangul-helper/'>A Hangul reference website</a></li>
+                  </ul>
                   
                   <p>...and many more on <a target='_blank' href='http://github.com/StarScape'>my GitHub.</a></p>
 
@@ -302,7 +306,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 100%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 100%'></span>
                 </div>
               </div>
 
@@ -313,7 +317,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 80%'></span>
+                  <span id='react' class='slide' slide-anim='growleft'style='width: 80%'></span>
                 </div>
               </div>
 
@@ -325,7 +329,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 80%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 80%'></span>
                 </div>
               </div>
 
@@ -336,7 +340,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 60%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 60%'></span>
                 </div>
               </div>
 
@@ -347,7 +351,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 60%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 60%'></span>
                 </div>
               </div>
 
@@ -358,7 +362,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 60%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 60%'></span>
                 </div>
               </div>
 
@@ -369,7 +373,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 80%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 80%'></span>
                 </div>
               </div>
 
@@ -380,7 +384,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 30%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 30%'></span>
                 </div>
               </div>
 
@@ -391,7 +395,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 90%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 90%'></span>
                 </div>
               </div>
 
@@ -402,7 +406,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 75%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 75%'></span>
                 </div>
               </div>
 
@@ -413,7 +417,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 50%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 50%'></span>
                 </div>
               </div>
 
@@ -424,7 +428,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 50%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 50%'></span>
                 </div>
               </div>
 
@@ -435,7 +439,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 100%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 100%'></span>
                 </div>
               </div>
 
@@ -446,7 +450,7 @@
                 </div>
 
                 <div class='progress-bar'>
-                  <span style='width: 80%'></span>
+                  <span class='slide' slide-anim='growleft'style='width: 80%'></span>
                 </div>
               </div>
 
@@ -495,25 +499,25 @@
           <p></p>
 
           <ul>
-            <li>
+            <li class='slide' slide-anim='fadeleft'>
               <div class='img-container'>
                 <img src="img/email.png">
               </div>
               mail@jackarrington.com
             </li>
-            <li>
+            <li class='slide' slide-anim='faderight'>
               <div class='img-container'>
                 <img src="img/github3.png">
               </div>
               <a target='_blank' href='http://github.com/StarScape'>GitHub</a>
             </li>
-            <li>
+            <li class='slide' slide-anim='fadebottom'>
               <div class='img-container'>
                 <img src="img/linkedin.png">
               </div>
               <a target='_blank' href='http://www.linkedin.com/in/jack-arrington-834079192/'>LinkedIn</a>
             </li>
-            <li>
+            <li class='slide' slide-anim='fadetop'>
               <div class='img-container'>
                 <img src="img/paper2.png">
               </div>
