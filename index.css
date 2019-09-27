@@ -158,6 +158,7 @@ nav {
   margin-bottom: 2rem;
 
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .header-box {
