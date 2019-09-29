@@ -13,20 +13,24 @@ Another one, lighter:
 * Patterns for sun and moon ✔️
 * Clouds ✔️
 * Shooting stars ✔️
-* Make shooting stars move as you scroll
 * Get rid of requestAnimationFrame ✔️
-* Shift sun/moon/clouds relative to mouse
 * Finish Experience Section ✔️
 * Finish Skills section ✔️
 * Replace language icons
 * Finish Contact section ✔️
 * Make top links work ✔️
-* Add very short about
 * Add resume to site ✔️
-* Slide in elems as you scroll
-* Typgraphy
+* Slide in elems as you scroll ✔️
+
+## Must do:
+* Webpack and deploy
 * Regen stars on window resize
-* Try using rasters of Sun/Moon/comets instead
+* Fontsize / resolution testing
+* Try using rasters of Sun/Moon/comets instead / increase performance
+
+## Extras:
+* Typgraphy
+* Shift sun/moon/clouds relative to mouse
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
 
 # Sections:
