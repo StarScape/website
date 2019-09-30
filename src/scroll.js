@@ -149,4 +149,4 @@ const main = () => {
   })
 }
 
-main()
+document.addEventListener('DOMContentLoaded', main)

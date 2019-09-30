@@ -39,8 +39,10 @@ const makeStar = (r1, r2) => {
   return group
 }
 
-const bgLayer = document.querySelector('#bg-layer')
-for (let i = 0; i < 2000; i++) {
-  bgLayer.appendChild(makeStar(0.15, 0.2))
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const bgLayer = document.querySelector('#bg-layer')
+  for (let i = 0; i < 2000; i++) {
+    bgLayer.appendChild(makeStar(0.15, 0.2))
+  }
+})
 

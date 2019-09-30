@@ -41,9 +41,8 @@ class Comet {
   }
 }
 
-const layer = document.querySelector('#comets-layer')
 
-const spawnComet = () => {
+const spawnComet = (layer) => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
@@ -57,8 +56,9 @@ const spawnComet = () => {
     })
   }
 
-  setTimeout(spawnComet, 3000)
 }
 
-setTimeout(spawnComet, 2000)
-
+document.addEventListener('DOMContentLoaded', () => {
+  const layer = document.querySelector('#comets-layer')
+  setInterval(() => spawnComet(layer), 2000)
+})
