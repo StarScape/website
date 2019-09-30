@@ -26,12 +26,13 @@ Another one, lighter:
 * Webpack and deploy
 * Regen stars on window resize
 * Fontsize / resolution testing
-* Try using rasters of Sun/Moon/comets instead / increase performance
+* Add warning for non-Chrome users
 
 ## Extras:
 * Typgraphy
 * Shift sun/moon/clouds relative to mouse
 * Stars (ahem, the *celestial sphere*, if you will) rotate as you scroll maybe?
+* Try using canvas to increase performance
 
 # Sections:
 
