@@ -23,7 +23,9 @@ Another one, lighter:
 * Slide in elems as you scroll ✔️
 
 ## Must do:
-* Webpack and deploy
+* Webpack and deploy ✔️
+* Compress SVGs
+* Add backend stuff to resume
 * Regen stars on window resize
 * Fontsize / resolution testing
 * Add warning for non-Chrome users
@@ -47,25 +49,4 @@ Another one, lighter:
 const getSunY = (p) => sunInitialY + sunDeltaY*Math.sin(p*(Math.PI/2))
 const getSunX = (p) => sunInitialX + sunDeltaX*Math.cos(p*(-Math.PI/2))
 
-# Slide in css
-
-```
-@keyframes slidein {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-div {
-  width: 200px;
-  height: 200px;
-  background-color: lightblue;
-  
-  animation: slidein 0.5s linear;
-}
-```
+Heroku DNS name:  avian-badger-ntj2vtxw5ukbvc7eoxxghbyl.herokudns.com.
