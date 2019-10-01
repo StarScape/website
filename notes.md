@@ -1,6 +1,6 @@
 # Notes
 
-Just lerp the damn colors. For the bottom color, lerp from 0-0.5 between yellow-orange to bright red, then from there lerp from red to blue. Test out different gradients in the CSS console para ver cual se ve mejor.
+Another possible performance fix idea: start and stop CSS animations on scroll
 
 One possible starting gradient:
 #3e5680 to #f1603a
