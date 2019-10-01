@@ -24,7 +24,7 @@ Another one, lighter:
 
 ## Must do:
 * Webpack and deploy ✔️
-* Compress SVGs
+* Compress SVGs ✔️
 * Add backend stuff to resume
 * Regen stars on window resize
 * Fontsize / resolution testing
