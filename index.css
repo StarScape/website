@@ -78,6 +78,19 @@ nav {
   position: absolute;
 }
 
+#sun {
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+#moon {
+  transition: transform 1s;
+}
+
+.cloud {
+  transition: transform 1s, opacity 1s;
+}
+
 .topmenu {
   list-style-type: none;
   margin-top: 15px;
