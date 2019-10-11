@@ -102,9 +102,9 @@ nav {
 }
 
 .comet {
-/*  transform-box: fill-box;
+  transform-box: fill-box;
   transform-origin: center right;
-*/}
+}
 
 .no-transition {
   transition: none !important;
