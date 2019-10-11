@@ -12,33 +12,15 @@ import {
   clamp,
 } from './util.js'
 
-const gradientTopInitial = '#3e5680'
-const gradientBottomInitial = '#f1603a'
-const gradientBottomFinal = darken(hexToRgb(gradientTopInitial), 25)
-
-const getGradientBottom = (p) => {
-  const rgb1 = hexToRgb(gradientBottomInitial)
-  const finalColor = (lerpColor(rgb1, gradientBottomFinal, p))
-
-  return rgbStr(finalColor)
-}
-
-const getGradientTop = (p) => {
-  const rgb = hexToRgb(gradientTopInitial)
-  const finalColor = darken(rgb, Math.floor(p * 110))
-
-  return rgbStr(finalColor)
-}
-
 // Rounds x down to the nearest multiple of 1/n
 const roundTo = (x, n) => Math.floor(x * n) / n
 
+// Round floating points to hundreds place
 const roundToHundreds = (x) => Math.round(x * 100) / 100
 
 const transformFromPercentage = (p, steps, min, max) =>
   clamp(min + (max - min) * roundTo(p, steps), min, max)
 
-// Impure functions
 const updateSun = (p, elem, initial=false) => {
   const percentSet = p / 0.5
 
@@ -73,13 +55,10 @@ const updateClouds = (p, clouds) => {
   })
 }
 
-const updateBgGradient = (p) => {
-  const gradientTop = getGradientTop(p)
-  const gradientBottom = getGradientBottom(p)
-  
-  document.body.style.background = 
-    `linear-gradient(to bottom, ${gradientTop}, ${gradientBottom})`
-  document.body.style.backgroundAttachment = 'fixed'
+// Gradually fade the top background layer to reveal the body's background
+const updateBgGradient = (p, topBackgroundElem) => {
+  console.log(1 - p);
+  topBackgroundElem.style.opacity = 1 - p
 }
 
 const updateArrow = (arrow) => {
@@ -93,13 +72,13 @@ const updateArrow = (arrow) => {
   }
 }
 
-const updateElems = ({ sun, moon, clouds, arrow }) => {
+const updateElems = ({ sun, moon, clouds, arrow, topBackground }) => {
   const percentToBottom = scrollPercent()
 
   updateSun(percentToBottom, sun)
   updateMoon(percentToBottom, moon)
   updateClouds(percentToBottom, clouds)
-  updateBgGradient(percentToBottom)
+  updateBgGradient(percentToBottom, topBackground)
   updateArrow(arrow)
 }
 
@@ -118,18 +97,18 @@ const initClouds = () => {
   })
 }
 
-const initialUpdate = ({ sun, moon, clouds, arrow }) => {
-  const domElems = [sun, moon, arrow, ...clouds.map(c => c.elem)]
+const initialUpdate = ({ sun, moon, clouds, arrow, topBackground }) => {
+  const domElems = [sun, moon, arrow, topBackground, ...clouds.map(c => c.elem)]
   for (const elem of domElems) {
     elem.classList.add('no-transition')
   }
 
-  updateElems({ sun, moon, clouds, arrow })
+  updateElems({ sun, moon, clouds, arrow, topBackground })
 
   setTimeout(() => {
-  for (const elem of domElems) {
-    elem.classList.remove('no-transition')
-  }
+    for (const elem of domElems) {
+      elem.classList.remove('no-transition')
+    }
   }, 10)
 }
 
@@ -137,15 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const sun = document.querySelector('#sun')
   const moon = document.querySelector('#moon')
   const arrow = document.querySelector('#down-arrow')
+  const topBackground = document.querySelector('#initial-background')
   const clouds = initClouds()
 
-  setTimeout(() => initialUpdate({ sun, moon, clouds, arrow }), 0)
+  setTimeout(() => initialUpdate({ sun, moon, clouds, arrow, topBackground }), 0)
 
   // Show hidden elements
   sun.setAttribute('display', null)
   moon.setAttribute('display', null)
 
   window.addEventListener('scroll', () => {
-    updateElems({ sun, moon, clouds, arrow })
+    updateElems({ sun, moon, clouds, arrow, topBackground })
   })
 })
