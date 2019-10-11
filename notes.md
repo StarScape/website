@@ -1,7 +1,5 @@
 # Notes
 
-Another possible performance fix idea: start and stop CSS animations on scroll
-
 One possible starting gradient:
 #3e5680 to #f1603a
 
