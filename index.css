@@ -101,6 +101,11 @@ nav {
   transition: transform 1s, opacity 1s;
 }
 
+.comet {
+/*  transform-box: fill-box;
+  transform-origin: center right;
+*/}
+
 .no-transition {
   transition: none !important;
 }

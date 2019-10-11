@@ -56,10 +56,8 @@ const updateClouds = (p, clouds) => {
 }
 
 // Gradually fade the top background layer to reveal the body's background
-const updateBgGradient = (p, topBackgroundElem) => {
-  console.log(1 - p);
+const updateBgGradient = (p, topBackgroundElem) =>
   topBackgroundElem.style.opacity = 1 - p
-}
 
 const updateArrow = (arrow) => {
   if (window.scrollY > 10) {

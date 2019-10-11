@@ -6,39 +6,28 @@ import {
   prob,
 } from './util.js'
 
+const comet = ({ speed, startx, starty, size=100, theta, container }) => {
+  const elem = document.createElementNS('http://www.w3.org/2000/svg', 'image')
+  elem.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'svg/comet.svg')
+  elem.setAttributeNS(null, 'x', startx)
+  elem.setAttributeNS(null, 'y', starty)
 
-class Comet {
+  elem.setAttributeNS(null, 'transform', `rotate(${theta}, ${startx + size/2}, ${starty + size/2})`)
+  elem.setAttributeNS(null, 'width',  size)
+  elem.setAttributeNS(null, 'height', size)
 
-  constructor({ startx, starty, size=100, theta, container }) {
-    this.speed = 45
-    this.thetaRads = radians(theta)
-    this.container = container
-    this.opacity = 1
+  elem.classList.add('comet')
+  elem.style.transition = `transform ${speed}s linear`
 
-    this.elem = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-    this.elem.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'svg/comet.svg');
-    this.elem.setAttributeNS(null, 'x', startx);
-    this.elem.setAttributeNS(null, 'y', starty);
-    this.elem.setAttributeNS(null, 'opacity', this.opacity);
+  // Prevent transform from being immediately applied
+  setTimeout(() =>
+    elem.style.transform = `translate(${Math.cos(radians(theta)) * 200}vw, ${Math.sin(radians(theta)) * 200}vw)`
+  , 0)
 
-    this.elem.setAttributeNS(null, 'width',  size);
-    this.elem.setAttributeNS(null, 'height', size);
-    this.elem.setAttributeNS(null, 'transform', `rotate(${theta}, ${startx + size/2}, ${starty + size/2})`);
-    this.container.appendChild(this.elem)
-
-    this.opacityDelta = randrange(0.002, 0.005)
-    this.animate()
-  }
-
-  animate() {
-    const x = Number(this.elem.getAttribute('x'))
-    this.elem.setAttributeNS(null, 'x', x + this.speed)
-    this.elem.setAttributeNS(null, 'opacity', (this.opacity -= this.opacityDelta))
-
-    if (this.opacity > 0.01) {
-      setTimeout(this.animate.bind(this), 20)
-    }
-  }
+  container.appendChild(elem)
+  elem.addEventListener('transitionend', () => {
+    elem.remove()
+  })
 }
 
 
@@ -46,16 +35,16 @@ const spawnComet = (layer) => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  if (/*scrollPercent() >= .2 && */ document.hasFocus() && prob(0.35)) {
-    new Comet({
+  if (/*scrollPercent() >= .2 && */ document.hasFocus() && prob(0.5)) {
+    comet({
+      speed: randrange(1, 1.2),
       startx: -100,
-      starty: randrange(-100, height*0.25),
+      starty: randrange(-5, height*0.175),
       size: Math.floor(randrange(50, 90)),
-      theta: randrange(10, 20),
+      theta: randrange(5, 20),
       container: layer
     })
   }
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
