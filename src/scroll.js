@@ -107,7 +107,11 @@ const initialUpdate = ({ sun, moon, clouds, arrow, topBackground }) => {
     for (const elem of domElems) {
       elem.classList.remove('no-transition')
     }
-  }, 10)
+
+    // Show hidden elements
+    sun.setAttribute('display', null)
+    moon.setAttribute('display', null)
+  }, 0)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -118,10 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const clouds = initClouds()
 
   setTimeout(() => initialUpdate({ sun, moon, clouds, arrow, topBackground }), 0)
-
-  // Show hidden elements
-  sun.setAttribute('display', null)
-  moon.setAttribute('display', null)
 
   window.addEventListener('scroll', () => {
     updateElems({ sun, moon, clouds, arrow, topBackground })
