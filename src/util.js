@@ -31,7 +31,7 @@ export const randrange = (min, max) => Math.floor(Math.random() * (max - min + 1
 export const avg = (...args) => args.reduce((a, b) => a + b) / args.length
 
 // Confine n to the range [x, y]
-export const confine = (n, x, y) => {
+export const clamp = (n, x, y) => {
   if (n > y) return y
   else if (n < x) return x
   return n

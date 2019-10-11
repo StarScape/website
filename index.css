@@ -23,6 +23,7 @@ body {
   /*background: linear-gradient(to bottom, #9ac0ff, #ff4e1f);*/
   /*background: linear-gradient(to bottom, #3e5680, #f1603a);*/
   background-attachment: fixed;
+  transition: all 1s;
 }
 
 p {
@@ -76,6 +77,23 @@ main {
 
 nav {
   position: absolute;
+}
+
+#sun {
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+#moon {
+  transition: transform 1s;
+}
+
+.cloud {
+  transition: transform 1s, opacity 1s;
+}
+
+.no-transition {
+  transition: none !important;
 }
 
 .topmenu {
