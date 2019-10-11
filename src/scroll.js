@@ -118,13 +118,28 @@ const initClouds = () => {
   })
 }
 
+const initialUpdate = ({ sun, moon, clouds, arrow }) => {
+  const domElems = [sun, moon, arrow, ...clouds.map(c => c.elem)]
+  for (const elem of domElems) {
+    elem.classList.add('no-transition')
+  }
+
+  updateElems({ sun, moon, clouds, arrow })
+
+  setTimeout(() => {
+  for (const elem of domElems) {
+    elem.classList.remove('no-transition')
+  }
+  }, 10)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const sun = document.querySelector('#sun')
   const moon = document.querySelector('#moon')
   const arrow = document.querySelector('#down-arrow')
   const clouds = initClouds()
 
-  setTimeout(() => updateElems({ sun, moon, clouds, arrow }), 0)
+  setTimeout(() => initialUpdate({ sun, moon, clouds, arrow }), 0)
 
   // Show hidden elements
   sun.setAttribute('display', null)
