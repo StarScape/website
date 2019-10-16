@@ -1,8 +1,9 @@
 import './comets.js'
 import './stars.js'
 import './scroll.js'
-import './slidein.js'
 import './scroll_anchors.js'
+
+import { update } from 'slidein'
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth

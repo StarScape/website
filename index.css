@@ -303,6 +303,20 @@ nav {
   margin-left: 0.25rem;
   display: flex;
   flex-direction: column;
+
+  --slide-cascade-increment: 0.05s;
+}
+
+.job-body p {
+  --slide-anim: fadetop;
+}
+
+.job-body ul {
+  --slide-cascade-increment: 0.1s;
+}
+
+.job-link-p {
+  --slide-anim: fadeleft !important;
 }
 
 .job-body .top-header {
@@ -336,6 +350,8 @@ nav {
 
 .tech-container {
   text-align: center;
+  --slide-anim: fadetop;
+  --slide-cascade-increment: 0.1s;
 }
 
 .other-projects-links {
@@ -397,6 +413,8 @@ nav {
   background: linear-gradient(to right, rgb(19, 214, 235), rgb(39, 234, 255));
               /*linear-gradient(to right, rgba(19, 214, 235, 0.1), rgba(39, 234, 255, 0.1));*/
   transform-origin: left;
+
+  --slide-anim: growleft;
 }
 
 .degree h3, h6 {
@@ -417,6 +435,7 @@ nav {
 
 .degree-header h3 {
   margin: 0;
+  --slide-anim: fadetop;
 }
 
 .degree-body {

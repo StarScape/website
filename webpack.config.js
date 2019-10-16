@@ -1,5 +1,18 @@
 const path = require('path')
 
+const devOptions =  process.env.NODE_ENV === 'development'
+  ? {
+    mode: 'development',
+    watch: true,
+    watchOptions: {
+      poll: true,
+      ignored: /node_modules/,
+    }
+  }
+  : {
+    mode: 'production',
+  }
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -12,7 +25,8 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    // extensions: ['*', '.js'],
+    modules: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'src')]
   },
   output: {
     path: __dirname + '/dist',
@@ -21,5 +35,6 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist'
-  }
+  },
+  ...devOptions,
 }
