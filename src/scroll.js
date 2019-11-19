@@ -35,11 +35,13 @@ const updateSun = (p, elem, initial=false) => {
 const updateMoon = (p, elem) => {
   const percentRisen = clamp(p / 0.5 - 1, 0, 1)
 
-  const x = -transformFromPercentage(percentRisen, 6, 0, 2);
-  const y = -transformFromPercentage(percentRisen, 6, -20, 70);
+  const x = transformFromPercentage(percentRisen, 6, 0, 2);
+  const y = 100 - transformFromPercentage(percentRisen, 6, 0, 65);
+  console.log(y);
   const scale = transformFromPercentage(percentRisen, 6, 1, 1.3);
 
-  const transform = `translate(${x}%, ${y}%) scale(${scale})`
+  const transform = `translate(${x}vw, ${y}vh) scale(${scale})`
+  console.log(transform);
   elem.style.transform = transform
 }
 

@@ -101,6 +101,7 @@ nav {
 }
 
 #moon {
+  position: absolute;
   transition: transform 1s;
 }
 
