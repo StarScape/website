@@ -24,11 +24,11 @@ const transformFromPercentage = (p, steps, min, max) =>
 const updateSun = (p, elem, initial=false) => {
   const percentSet = p / 0.5
 
-  const x = -transformFromPercentage(percentSet, 6, 0, 5);
-  const y = transformFromPercentage(percentSet, 6, 0, 50);
-  const scale = transformFromPercentage(percentSet, 6, 1, 2);
+  const x = transformFromPercentage(percentSet, 6, 57, 65);
+  const y = transformFromPercentage(percentSet, 6, 57, 100);
+  const scale = transformFromPercentage(percentSet, 6, 1, 1.3);
 
-  const transform = `translate(${x}%, ${y}%) scale(${scale})`
+  const transform = `translate(${x}vw, ${y}vh) scale(${scale})`
   elem.style.transform = transform
 }
 
