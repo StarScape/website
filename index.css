@@ -110,6 +110,7 @@ nav {
 }
 
 .comet {
+  position: absolute;
   transform-box: fill-box;
   transform-origin: center right;
 }

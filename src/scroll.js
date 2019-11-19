@@ -37,20 +37,23 @@ const updateMoon = (p, elem) => {
 
   const x = transformFromPercentage(percentRisen, 6, 0, 2);
   const y = 100 - transformFromPercentage(percentRisen, 6, 0, 65);
-  console.log(y);
   const scale = transformFromPercentage(percentRisen, 6, 1, 1.3);
 
   const transform = `translate(${x}vw, ${y}vh) scale(${scale})`
-  console.log(transform);
   elem.style.transform = transform
 }
 
 const updateClouds = (p, clouds) => {
   clouds.forEach(cloud => {
-    const x = transformFromPercentage(p, 12, 0, 20)
-    const y = transformFromPercentage(p, 12, 0, 10)
     const opacity = 0.7 - transformFromPercentage(p, 12, 0, .6)
-    const transform = `translate(${x * cloud.speed}%, ${y * cloud.speed}%)`
+    const initx = Number(cloud.elem.attributes.x.value)
+    const inity = Number(cloud.elem.attributes.y.value)
+    const offx = transformFromPercentage(p, 12, 0, 20)
+    const offy = transformFromPercentage(p, 12, 0, 10)
+    const x = initx + offx * cloud.speed
+    const y = inity + offy * cloud.speed
+
+    const transform = `translate(${x}vw, ${y}vh)`
 
     cloud.elem.style.transform = transform
     cloud.elem.style.opacity = opacity * cloud.speed
