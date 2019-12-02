@@ -95,6 +95,7 @@ const initClouds = () => {
     const cloud = new Cloud(el, cloudSpeeds[i])
     cloud.elem.setAttributeNS(null, 'width', `${cloudSize}`)
     cloud.elem.setAttributeNS(null, 'height', `${cloudSize}`)
+    cloud.elem.style.display = null
 
     return cloud
   })
@@ -114,8 +115,8 @@ const initialUpdate = ({ sun, moon, clouds, arrow, topBackground }) => {
     }
 
     // Show hidden elements
-    sun.setAttribute('display', null)
-    moon.setAttribute('display', null)
+    sun.style.display = null
+    moon.style.display = null
   }, 0)
 }
 
