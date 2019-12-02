@@ -53,6 +53,7 @@ const clearStars = () => {
 let t = null
 
 window.addEventListener('resize', () => {
+  // regen stars only once resizing is DONE
   if (t) {
     clearTimeout(t)
   }

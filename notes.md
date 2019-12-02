@@ -24,7 +24,7 @@ Another one, lighter:
 * Webpack and deploy ✔️
 * Compress SVGs ✔️
 * Add backend stuff to resume
-* Regen stars on window resize
+* Regen stars on window resize ✔️
 * Fontsize / resolution testing
 * Add warning for non-Chrome users
 
