@@ -94,6 +94,10 @@ nav {
   height: 100%;
 }
 
+.notransition {
+  transition: none !important;
+}
+
 #sun {
   position: absolute;
   transform-origin: center;

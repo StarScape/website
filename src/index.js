@@ -2,6 +2,7 @@ import './comets.js'
 import './stars.js'
 import './scroll.js'
 import './scroll_anchors.js'
+import './resize.js'
 
 import { update } from 'slidein'
 
