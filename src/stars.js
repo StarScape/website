@@ -1,6 +1,4 @@
 const svgns = "http://www.w3.org/2000/svg"
-const WIDTH = window.innerWidth
-const HEIGHT = window.innerHeight
 
 const randrange = (min, max) => {
   min = Math.ceil(min);
@@ -13,8 +11,9 @@ const floatrange = (min, max) => {
 }
 
 const makeStar = (r1, r2) => {
-  const cx = randrange(0, WIDTH)
-  const cy = randrange(0, HEIGHT)
+  const cx = randrange(0, window.innerWidth)
+  const cy = randrange(0, window.innerHeight)
+  // console.log(window.innerHeight);
   const r =  floatrange(r1, r2)
   const rg = randrange(200, 255)
   const color = `rgb(${rg}, ${rg}, 255)`
@@ -39,10 +38,30 @@ const makeStar = (r1, r2) => {
   return group
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+const genStars = () => {
   const bgLayer = document.querySelector('#bg-layer')
   for (let i = 0; i < 2000; i++) {
     bgLayer.appendChild(makeStar(0.15, 0.2))
   }
+}
+
+const clearStars = () => {
+  const bgLayer = document.querySelector('#bg-layer')
+  bgLayer.innerHTML = ""
+}
+
+let t = null
+
+window.addEventListener('resize', () => {
+  if (t) {
+    clearTimeout(t)
+  }
+  t = setTimeout(() => {
+    console.log('passed timeout');
+    clearStars()
+    genStars()
+  }, 250)
 })
+
+document.addEventListener('DOMContentLoaded', genStars)
 
