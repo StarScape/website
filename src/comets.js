@@ -7,6 +7,7 @@ import {
 } from './util.js'
 
 const comet = ({ speed, startx, starty, size=100, theta, container }) => {
+  console.log('comet');
   const elem = document.createElementNS('http://www.w3.org/2000/svg', 'image')
   elem.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'svg/comet.svg')
   elem.setAttributeNS(null, 'x', startx)

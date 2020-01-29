@@ -1,4 +1,4 @@
-import './comets.js'
+// import './comets.js'
 import './stars.js'
 import './scroll.js'
 import './scroll_anchors.js'
