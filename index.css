@@ -22,11 +22,26 @@ body {
 
   background: linear-gradient(rgb(0, 0, 18), rgb(37, 61, 103));
   background-attachment: fixed;
+
+  /*
+    Ugly hack to fix the weird overflow problem caused by #notice. Can remove once I fix that.
+  */
+  overflow-x: hidden;
+}
+
+#notice {
+  width: 99vw;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  border: none;
 }
 
 #initial-background {
   z-index: -2;
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
 
@@ -75,6 +90,7 @@ a:hover:before {
 
 #canvas {
   position: fixed;
+  left: 0;
   top: 0;
   z-index: -1;
   width: 100vw;
@@ -92,6 +108,8 @@ nav {
 
 #graphics {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
