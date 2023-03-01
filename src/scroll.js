@@ -64,25 +64,13 @@ const updateClouds = (p, clouds) => {
 const updateBgGradient = (p, topBackgroundElem) =>
   topBackgroundElem.style.opacity = 1 - p
 
-const updateArrow = (arrow) => {
-  if (window.scrollY > 10) {
-    arrow.style.opacity = 0
-    arrow.style.visibility = 'hidden'
-  }
-  else {
-    arrow.style.visibility = 'visible'
-    arrow.style.opacity = 0.6
-  }
-}
-
-const updateElems = ({ sun, moon, clouds, arrow, topBackground }) => {
+const updateElems = ({ sun, moon, clouds, topBackground }) => {
   const percentToBottom = scrollPercent()
 
   updateSun(percentToBottom, sun)
   updateMoon(percentToBottom, moon)
   updateClouds(percentToBottom, clouds)
   updateBgGradient(percentToBottom, topBackground)
-  updateArrow(arrow)
 }
 
 const initClouds = () => {
@@ -101,13 +89,13 @@ const initClouds = () => {
   })
 }
 
-const initialUpdate = ({ sun, moon, clouds, arrow, topBackground }) => {
-  const domElems = [sun, moon, arrow, topBackground, ...clouds.map(c => c.elem)]
+const initialUpdate = ({ sun, moon, clouds, topBackground }) => {
+  const domElems = [sun, moon, topBackground, ...clouds.map(c => c.elem)]
   for (const elem of domElems) {
     elem.classList.add('no-transition')
   }
 
-  updateElems({ sun, moon, clouds, arrow, topBackground })
+  updateElems({ sun, moon, clouds, topBackground })
 
   setTimeout(() => {
     for (const elem of domElems) {
@@ -123,13 +111,12 @@ const initialUpdate = ({ sun, moon, clouds, arrow, topBackground }) => {
 document.addEventListener('DOMContentLoaded', () => {
   const sun = document.querySelector('#sun')
   const moon = document.querySelector('#moon')
-  const arrow = document.querySelector('#down-arrow')
   const topBackground = document.querySelector('#initial-background')
   const clouds = initClouds()
 
-  setTimeout(() => initialUpdate({ sun, moon, clouds, arrow, topBackground }), 0)
+  setTimeout(() => initialUpdate({ sun, moon, clouds, topBackground }), 0)
 
   window.addEventListener('scroll', () => {
-    updateElems({ sun, moon, clouds, arrow, topBackground })
+    updateElems({ sun, moon, clouds, topBackground })
   })
 })
