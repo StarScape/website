@@ -24,7 +24,7 @@ const transformFromPercentage = (p, steps, min, max) =>
 const updateSun = (p, elem, initial=false) => {
   const percentSet = p / 0.5
 
-  const x = transformFromPercentage(percentSet, 6, 57, 65);
+  const x = transformFromPercentage(percentSet, 6, 70, 78);
   const y = transformFromPercentage(percentSet, 6, 57, 100);
   const scale = transformFromPercentage(percentSet, 6, 1, 1.3);
 
@@ -35,7 +35,7 @@ const updateSun = (p, elem, initial=false) => {
 const updateMoon = (p, elem) => {
   const percentRisen = clamp(p / 0.5 - 1, 0, 1)
 
-  const x = transformFromPercentage(percentRisen, 6, 0, 2);
+  const x = transformFromPercentage(percentRisen, 6, 20, 22);
   const y = 100 - transformFromPercentage(percentRisen, 6, 0, 65);
   const scale = transformFromPercentage(percentRisen, 6, 1, 1.3);
 

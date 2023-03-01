@@ -15,27 +15,12 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
+  height: 3500px;
   margin: 0;
   padding: 0;
   font-family: Metropolis, sans-serif;
-
   background: linear-gradient(rgb(0, 0, 18), rgb(37, 61, 103));
   background-attachment: fixed;
-
-  /*
-    Ugly hack to fix the weird overflow problem caused by #notice. Can remove once I fix that.
-  */
-  overflow-x: hidden;
-}
-
-#notice {
-  width: 99vw;
-  top: 0px;
-  left: 0px;
-  margin: 0px;
-  border: none;
-  font-size: 0.85em;
 }
 
 #initial-background {
@@ -62,10 +47,6 @@ a {
   padding-top: 2px;
   padding-bottom: 2px;
   font-size: 0.75rem;
-}
-
-a:hover {
-  color: rgb(19, 214, 235);
 }
 
 a:before {
@@ -103,20 +84,12 @@ main {
   justify-content: flex-start;
 }
 
-nav {
-  position: absolute;
-}
-
 #graphics {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.notransition {
-  transition: none !important;
 }
 
 #sun {
@@ -142,57 +115,6 @@ nav {
 
 .no-transition {
   transition: none !important;
-}
-
-.topmenu {
-  list-style-type: none;
-  margin-top: 15px;
-}
-
-.topmenu li {
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  display: inline-block;
-  margin-left: 20px;
-  color: #ffffff;
-  opacity: 0.8;
-
-  transition: opacity 1s;
-}
-
-.topmenu li a {
-  font-size: 1em;
-}
-
-/* Hide underline for topmenu img */
-#topmenu-img a:before {
-  visibility: hidden;
-}
-
-.topmenu img {
-  vertical-align: middle;
-  width: 2.0rem;
-}
-
-#topmenu-img {
-  margin-top: -1px;
-  /*opacity: 1.0;*/
-}
-
-.topmenu li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.topmenu li:hover {
-  opacity: 1.0;
-  cursor: pointer;
-}
-
-.topmenu li a:before {
-  bottom: 0;
-  height: 1px;
-  background-color: white;
 }
 
 .sections {
@@ -263,252 +185,4 @@ nav {
 #section1-bottom-header {
   margin-top: 3em;
   text-align: center;
-}
-
-.img-container {
-  display: inline-block;
-}
-
-.img-container img {
-  /*background-color: #111111;*/
-  border-radius: 50%;
-  width: 3rem;
-  margin-left:  0.5em;
-  margin-right: 0.5em;
-
-  filter: grayscale(90%);
-  transition-property: filter;
-  transition-duration: 0.5s;
-}
-
-.img-container img:hover {
-  filter: grayscale(0%) !important;
-}
-
-.img-container h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  text-align: center;
-}
-
-.img-container:hover h6 {
-  opacity: 1;
-}
-
-.jobs {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-column-gap: 3rem;
-  grid-row-gap: 0rem;
-}
-
-.job {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  /*margin-bottom: 10vh;*/
-}
-
-.job .job-img {
-  width: 25rem;
-}
-
-.job-info {
-  /*flex: 1;*/
-  flex-direction: column;
-  padding: 1rem;
-  padding-left:  2rem;
-  padding-right: 2rem;
-  width: 25rem;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.job-company {
-  white-space: nowrap;
-  margin: 0;
-}
-
-.job-body {
-  margin-left: 0.25rem;
-  display: flex;
-  flex-direction: column;
-
-  --slide-cascade-increment: 0.05s;
-}
-
-.job-body p {
-  --slide-anim: fadetop;
-}
-
-.job-body ul {
-  --slide-cascade-increment: 0.1s;
-}
-
-.job-link-p {
-  --slide-anim: fadeleft !important;
-}
-
-.job-body .top-header {
-  font-style: italic;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-}
-
-.job-body .header {
-  margin-top: 1.5em;
-  margin-bottom: 0.25em;
-}
-
-.job p {
-  font-size: 0.75em;
-}
-
-.accomplishments-ul {
-  margin: 0;
-  font-size: 0.75em;
-  padding-left: 1em;
-}
-
-.accomplishments-ul li {
-  line-height: 1.0rem;
-}
-
-.job .img-container img {
-  width: 2.5rem;
-}
-
-.tech-container {
-  text-align: center;
-  --slide-anim: fadetop;
-  --slide-cascade-increment: 0.1s;
-}
-
-.other-projects-links {
-  list-style-type: none;
-  padding-left: 5px;
-  margin: 5px 0 5px;
-}
-.other-projects-links li {
-  line-height: 120%;
-}
-
-#skills-container {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-column-gap: 2rem;
-}
-
-.skill {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-/* Change some props specifically in skills */
-.skill .img-container {
-  position: relative;
-  margin-right: 0.25rem;
-}
-
-.skill .img-container img {
-  width: 2.75rem;
-  filter: grayscale(40%);
-  margin-bottom: 0em;
-}
-
-.skill .img-container h6 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
-}
-
-.progress-bar {
-  width: 250px;
-  height: 12px;
-  border-radius: 100px;
-  background-color: #333333;
-  /*background-color: #464646;*/
-  overflow: hidden;
-
-}
-
-.progress-bar > span {
-  display: block;
-  height: 200%;
-  float: left;
-  filter: brightness(75%) saturate(150%);
-  background: linear-gradient(to right, rgb(19, 214, 235), rgb(39, 234, 255));
-              /*linear-gradient(to right, rgba(19, 214, 235, 0.1), rgba(39, 234, 255, 0.1));*/
-  transform-origin: left;
-
-  --slide-anim: growleft;
-}
-
-.degree h3, h6 {
-  margin-top:    0;
-  margin-bottom: 0.5em;
-}
-
-.degree-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.degree-header img {
-  width: 2rem;
-  margin-right: 10px;
-}
-
-.degree-header h3 {
-  margin: 0;
-  --slide-anim: fadetop;
-}
-
-.degree-body {
-  margin-left: calc(2rem + 12px);
-}
-
-#contact ul {
-  display: grid;
-  grid-template-columns: repeat(2, 250px);
-  padding: 0;
-  font-size: 0.9rem;
-  list-style-type: none;
-}
-
-#contact ul li {
-  display: flex;
-  align-items: center;
-  margin: 10px 0 10px 0;
-}
-
-#contact ul li img {
-  filter: brightness(90%);
-  width: 2rem;
-}
-
-#down-arrow {
-  position: fixed;
-  left: calc(50% - 30px);
-  top:  calc(100vh - 70px);
-  width:  30px;
-  height: 30px;
-  border-right:  5px solid #ffffff99;
-  border-bottom: 5px solid #ffffff99;
-  opacity: 0.5;
-  transform: rotate(45deg);
-  transition: border-color 0.5s, visibility 0.5s, opacity 0.5s;
-}
-
-#down-arrow:hover {
-  border-color: #ffffff;
-  cursor: pointer;
 }
