@@ -21,6 +21,7 @@ body {
   font-family: Metropolis, sans-serif;
   background: linear-gradient(rgb(0, 0, 18), rgb(37, 61, 103));
   background-attachment: fixed;
+  line-height: 25px;
 }
 
 #initial-background {
@@ -46,7 +47,6 @@ a {
   text-decoration: none;
   padding-top: 2px;
   padding-bottom: 2px;
-  font-size: 0.75rem;
 }
 
 a:before {

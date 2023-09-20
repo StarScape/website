@@ -35,7 +35,7 @@ const comet = ({ speed, startx, starty, size=100, theta, container }) => {
 const spawnComet = (layer) => {
   const height = window.innerHeight;
 
-  if (/*scrollPercent() >= .2 && */ document.hasFocus() && prob(0.35)) {
+  if (/*scrollPercent() >= .2 && */ document.hasFocus() && prob(0.4)) {
     comet({
       speed: randrange(0.9, 1.1),
       startx: -100,
