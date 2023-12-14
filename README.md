@@ -10,6 +10,12 @@ To start development, run:
 npm run dev
 ```
 
+## Deploy to prod
+
+```shell
+vercel --prod
+```
+
 Site inspo:
 
 https://blowfish.page/docs/getting-started/
