@@ -22,6 +22,7 @@ body {
   background: linear-gradient(rgb(0, 0, 18), rgb(37, 61, 103));
   background-attachment: fixed;
   line-height: 25px;
+  overflow-x: hidden;
 }
 
 #initial-background {
@@ -35,10 +36,6 @@ body {
   background: linear-gradient(rgb(62, 86, 128), rgb(241, 96, 58));
   opacity: 1;
   transition: opacity 0s linear;
-}
-
-p {
-  font-size: 0.9em;
 }
 
 a {
