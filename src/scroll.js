@@ -25,7 +25,7 @@ const updateSun = (p, elem, initial=false) => {
   const percentSet = p / 0.5
 
   const x = transformFromPercentage(percentSet, 6, 70, 78);
-  const y = transformFromPercentage(percentSet, 6, 57, 100);
+  const y = transformFromPercentage(percentSet, 6, 57, 110);
   const scale = transformFromPercentage(percentSet, 6, 1, 1.3);
 
   const transform = `translate(${x}vw, ${y}vh) scale(${scale})`
@@ -80,12 +80,7 @@ const initClouds = () => {
   const cloudSpeeds = [1, 0.8, 0.95, 0.9]
 
   return cloudElems.map((el, i) => {
-    const cloud = new Cloud(el, cloudSpeeds[i])
-    cloud.elem.setAttributeNS(null, 'width', `${cloudSize}`)
-    cloud.elem.setAttributeNS(null, 'height', `${cloudSize}`)
-    cloud.elem.style.display = null
-
-    return cloud
+    return new Cloud(el, cloudSpeeds[i])
   })
 }
 
@@ -100,11 +95,8 @@ const initialUpdate = ({ sun, moon, clouds, topBackground }) => {
   setTimeout(() => {
     for (const elem of domElems) {
       elem.classList.remove('no-transition')
+      elem.style.display = null
     }
-
-    // Show hidden elements
-    sun.style.display = null
-    moon.style.display = null
   }, 0)
 }
 
